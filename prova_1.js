@@ -42,17 +42,20 @@ let prossimacarta= 0;
 giocatore = {
 	classe:null,
 	nome=null,
-	punti=0
+		mano = {
+			classe:null,
+			nome=null,
+			carte=[],
+			punti=0
+		}
+	
 };
-mano = {
-	classe:null,
-	nome=null,
-	carte=[],
-};
+let fa;
+let al;
 let dim = 40;
 let cbris;
 function inizializza(){//va bene ho controllato è perfetta!
-	
+
 	Mazzo=new Carta[dim]; 
 	for(let i=0;i<10;i++)
 	{ 
@@ -109,7 +112,7 @@ function inizializza(){//va bene ho controllato è perfetta!
 function distribuiscicarte(nom) {
 	for (let i = 1; i <4; i++)
 	{
-		mano.carte[i]=estrai();
+		giocatore.mano.carte[i]=estrai();
 	}
 }
 function mazziere(nom) {
@@ -190,7 +193,11 @@ function vincimano(carta1,carta2,p1,p2,cbris)//qui stesso problema della funzion
 	
 	if(carta1.seme===carta2.seme){
 		if(carta1.valpunti>carta2.valpunti){
-			giocatore.p1.punti+=carta1.valpunti+carta2.valpunti;//--
+			if(p1 === nome1){
+				giocatore.mano.punti+=carta1.valpunti+carta2.valpunti;
+			}else{
+
+			}
 			return p1;
 		}else{
 			if(carta1.valpunti<carta2.valpunti){
