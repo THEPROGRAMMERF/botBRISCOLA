@@ -236,4 +236,5 @@ function vincita(p1,p2){
 	}
 }
 
-client . login ( "NzM2MTczMDYwOTA1ODkzOTI4.Xxq8lw.xIaGUnnrb0kPIxhyrbHSmGwwFKY ") ;
+client . login ( "NzM2MTczMDYwOTA1ODkzOTI4.GaaPwx.qhAmIo8msPa_8ML_b36ASBRD8e2mXSynCcR5tA ") ;
+
